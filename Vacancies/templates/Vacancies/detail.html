@@ -1,0 +1,9 @@
+{% extends 'Vacancies/base.html' %}
+{% block content %}
+        <p class = "post_title">{{ post.title }}</p>
+        <p class = "post_sub">{{ post.zp }}</p>
+        <p class = "post_sub">{{ post.company }}</p>
+        <br><br>
+        <p>{{ post.descript|linebreaksbr }}</p>
+
+{% endblock %}
