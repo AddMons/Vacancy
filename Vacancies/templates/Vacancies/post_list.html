@@ -1,11 +1,10 @@
 {% extends 'Vacancies/base.html' %}
-{% load static %}
 {% block content %}
 
 {% for post in posts %}
         <div class="post">
             <a class = "post_title" href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
-            <img class = "imgInList" src = "{% static {{post.icon.path}} %}">
+            <img class = "imgInList" src = "{{ post.icon.url }}">
             <p class = "post_sub">{{ post.zp }}</p>
             <p class = "post_sub">{{ post.company }}, {{ post.adress }}</p>
             

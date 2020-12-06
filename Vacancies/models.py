@@ -10,7 +10,7 @@ class Post(models.Model):
     adress = models.CharField(max_length=200)
     city = models.CharField(max_length=200)
     phone = models.CharField(max_length=13)
-    icon = models.ImageField(upload_to='Vacancies/static/img')
+    icon = models.ImageField(upload_to='galery')
     zp = models.CharField(max_length=200)
     sphere = models.CharField(max_length=200)
     published_date = models.DateTimeField(blank=True, null=True)
