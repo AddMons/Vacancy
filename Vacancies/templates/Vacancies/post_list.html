@@ -1,14 +1,24 @@
 {% extends 'Vacancies/base.html' %}
+
 {% block content %}
 
-{% for post in posts %}
-        <div class="post">
-            <a class = "post_title" href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
-            <img class = "imgInList" src = "{{ post.icon.url }}">
-            <p class = "post_sub">{{ post.zp }}</p>
-            <p class = "post_sub">{{ post.company }}, {{ post.adress }}</p>
-            
-        </div>
-    {% endfor %}
-
+<section class="u-clearfix u-section-1" id="sec-d11b">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <div class="u-list u-repeater u-list-1">
+        {% for post in posts %}
+        <div class="u-black u-container-style u-list-item u-opacity u-opacity-20 u-repeater-item u-list-item-1">
+            <div class="u-container-layout u-similar-container u-container-layout-1">
+              <h4 class="u-text u-text-default u-text-1">{{ post.title }}</h4>
+              <h6 class="u-text u-text-2">{{ post.zp }}<br>
+              </h6>
+              <p class="u-small-text u-text u-text-font u-text-variant u-text-3">{{ post.city }}, {{ post.adress }}</p>
+              <img src="{{ post.icon.url }}" alt="{{ post.company }}" class="u-image u-image-default u-image-1" data-image-width="2000" data-image-height="1333">
+              <h5 class="u-text u-text-4">{{ post.company }}</h5>
+              <p class="u-text u-text-5">   </p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
 {% endblock %}
