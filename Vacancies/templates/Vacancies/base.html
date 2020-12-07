@@ -23,6 +23,7 @@
         <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="all"/>
         <link href="{% static 'css/theme-blues.css' %}" rel="stylesheet" type="text/css" media="all"/>
         <link href="{% static 'css/Page-1.css' %}" rel="stylesheet" type="text/css" media="all"/>
+        <link href="{% static 'css/Page-2.css' %}" rel="stylesheet" type="text/css" media="all"/>
         <link href="{% static 'css/nicepage.css' %}" rel="stylesheet" type="text/css" media="all"/>
         <script class="u-script" type="text/javascript" src="{% static 'jquery.js' %}" defer=""></script>
         <script class="u-script" type="text/javascript" src="{% static 'nicepage.js' %}" defer=""></script>
@@ -48,7 +49,7 @@
 				
                     <div class="row nav-menu">
 						<div class="col-sm-3 col-md-2 columns">
-							<a href="index.html">
+							<a href="{% url 'home' %}">
 								<img class="logo logo-light" alt="Logo" src="{% static 'img/logo-light.png' %}">
 								<img class="logo logo-dark" alt="Logo" src="{% static 'img/logo-dark.png' %}">
 							</a>
@@ -56,9 +57,9 @@
 					
 						<div class="col-sm-9 col-md-10 columns">
 							<ul class="menu">
-								<li><a href="#">Home Pages</a></li>
-								<li><a href="#">New</a></li>
-								<li><a href="#">Search</a></li>
+								<li><a href="{% url 'home' %}">Home Pages</a></li>
+								<li><a href="{% url 'home' %}">New</a></li>
+								<li><a href="{% url 'post_list' %}">Search</a></li>
 								
 							</ul>
 
