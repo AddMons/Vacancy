@@ -14,6 +14,7 @@ class Post(models.Model):
     zp = models.CharField(max_length=200)
     sphere = models.CharField(max_length=200)
     published_date = models.DateTimeField(blank=True, null=True)
+    shortDesc = models.TextField()
 
     def publish(self):
         self.published_date = timezone.now()
